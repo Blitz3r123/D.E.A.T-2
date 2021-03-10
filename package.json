@@ -1,0 +1,23 @@
+{
+  "name": "d.e.a.t",
+  "version": "2.0.0",
+  "description": "New and improved D.E.A.T.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blitz3r123/D.E.A.T-2.git"
+  },
+  "author": "Kaleem Peeroo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blitz3r123/D.E.A.T-2/issues"
+  },
+  "homepage": "https://github.com/Blitz3r123/D.E.A.T-2#readme",
+  "dependencies": {
+    "electron": "^12.0.0"
+  }
+}
