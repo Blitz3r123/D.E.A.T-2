@@ -1,15 +1,19 @@
+import React, { Component } from 'react';
+import {
+	Container,
+	Row,
+	Col
+} from 'react-bootstrap';
 
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+	render(){
+		return(
+		<Container>
+			<Row>
+				<Col sm={4}>1 of 2</Col>
+				<Col sm={8}>2 of 2</Col>
+			</Row>
+		</Container>	
+		);
+	}
 }
-
-export default App;
