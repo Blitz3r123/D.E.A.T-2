@@ -13,6 +13,7 @@ import './css/App.css';
 import NavMenu from './components/NavMenu';
 import MainContent from './components/MainContent';
 import CreateContent from './components/CreateContent';
+import AnalyseContent from './components/AnalyseContent';
 
 export default class App extends Component {
 	render(){
@@ -34,6 +35,10 @@ export default class App extends Component {
 
 						<Route path="/create">
 							<CreateContent />
+						</Route>
+
+						<Route path="/analyse">
+							<AnalyseContent />
 						</Route>
 					</Switch>
 				</Col>
