@@ -3,10 +3,12 @@ import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import { HomeOutline, CreateOutline, StatsChartOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
+import './../css/NavMenu.css';
+
 export default class NavMenu extends Component{
     render(){
         return(
-            <ListGroup>
+            <ListGroup className='list-group-unique'>
                 <ListGroup.Item>
                     <Link to="/" className="navmenu-link">
                         <HomeOutline/>

@@ -6,11 +6,13 @@ import {
 	Navbar,
 	NavbarBrand
 } from 'react-bootstrap';
+import { Switch, Route } from 'react-router-dom';
 
 import './css/App.css';
 
 import NavMenu from './components/NavMenu';
 import MainContent from './components/MainContent';
+import CreateContent from './components/CreateContent';
 
 export default class App extends Component {
 	render(){
@@ -25,7 +27,15 @@ export default class App extends Component {
 				</Col>
 				
 				<Col sm={10}>
-					<MainContent />
+					<Switch>
+						<Route exact path="/">
+							<MainContent />
+						</Route>
+
+						<Route path="/create">
+							<CreateContent />
+						</Route>
+					</Switch>
 				</Col>
 			</Row>
 		</Container>	
