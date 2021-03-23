@@ -7,8 +7,9 @@ export default class AnalyseRow extends Component{
     render(){
         return(
         <Card className="main-content-card">
-            <Card.Header style={{fontWeight: 'bold'}}>
+            <Card.Header style={{fontWeight: 'bold'}} className="analyse-header-container">
                 Analyse
+                <input type="text" placeholder="Search for a test"></input>
             </Card.Header>
 
             <div className="analyse-graphs-container">
