@@ -1,5 +1,12 @@
+.execute-buttons-container{
+    display: flex;
+    padding: 2vh 1vw;
+    flex-wrap: wrap;
+}
+
 .test-card{
     margin-right: 1vw;
+    margin-bottom: 2vh;
 }
 
 .test-container{
