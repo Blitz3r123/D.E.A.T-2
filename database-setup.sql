@@ -27,7 +27,7 @@ CREATE TABLE ThroughputData (
   INDEX (TestResultsID)
 );
 CREATE TABLE PacketData (
-  PacketDataID int(10) NOT NULL AUTO_INCREMENT, 
+  PacketDataID int(10) NOT NULL AUTO_INCREMENT comment '                ', 
   TestResultsID int(10) NOT NULL, 
   OneWayLatencyUs int(10), 
   PRIMARY KEY (PacketDataID), 
@@ -53,30 +53,9 @@ CREATE TABLE ParticipantConfiguration (
 );
 CREATE TABLE Configuration (
   ConfigurationID int(10) NOT NULL AUTO_INCREMENT, 
+  Setting varchar(255), 
   PRIMARY KEY (ConfigurationID), 
   UNIQUE INDEX (ConfigurationID)
-);
-CREATE TABLE QoSSetting (
-  QoSID int(10) NOT NULL AUTO_INCREMENT, 
-  ConfigurationID int(10) NOT NULL, 
-  Parameter varchar(255), 
-  IntValue int(10), 
-  BoolValue varchar(255), 
-  StringValue varchar(255), 
-  PRIMARY KEY (QoSID), 
-  UNIQUE INDEX (QoSID), 
-  INDEX (ConfigurationID)
-);
-CREATE TABLE GeneralSetting (
-  GeneralSettingID int(10) NOT NULL AUTO_INCREMENT, 
-  ConfigurationID int(10) NOT NULL, 
-  Parameter varchar(255), 
-  IntValue int(10), 
-  BoolValue varchar(255), 
-  StringValue varchar(255), 
-  PRIMARY KEY (GeneralSettingID), 
-  UNIQUE INDEX (GeneralSettingID), 
-  INDEX (ConfigurationID)
 );
 CREATE TABLE Repetition (
   RepetitionID int(10) NOT NULL AUTO_INCREMENT, 
@@ -84,6 +63,16 @@ CREATE TABLE Repetition (
   PRIMARY KEY (RepetitionID), 
   UNIQUE INDEX (RepetitionID), 
   INDEX (TestID)
+);
+CREATE TABLE Value (
+  ValueID int(10) NOT NULL AUTO_INCREMENT, 
+  intValue int(10), 
+  stringValue varchar(255), 
+  boolValue int(1), 
+  ConfigurationID int(10) NOT NULL, 
+  PRIMARY KEY (ValueID), 
+  UNIQUE INDEX (ValueID), 
+  INDEX (ConfigurationID)
 );
 ALTER TABLE 
   TestResults 
@@ -106,18 +95,14 @@ ALTER TABLE
 ADD 
   CONSTRAINT FKParticipan732613 FOREIGN KEY (ParticipantID) REFERENCES Participant (ParticipantID);
 ALTER TABLE 
+  Repetition 
+ADD 
+  CONSTRAINT FKRepetition783492 FOREIGN KEY (TestID) REFERENCES Test (TestID);
+ALTER TABLE 
   ParticipantConfiguration 
 ADD 
   CONSTRAINT FKParticipan223509 FOREIGN KEY (ConfigurationID) REFERENCES Configuration (ConfigurationID);
 ALTER TABLE 
-  QoSSetting 
+  Value 
 ADD 
-  CONSTRAINT FKQoSSetting833317 FOREIGN KEY (ConfigurationID) REFERENCES Configuration (ConfigurationID);
-ALTER TABLE 
-  GeneralSetting 
-ADD 
-  CONSTRAINT FKGeneralSet124125 FOREIGN KEY (ConfigurationID) REFERENCES Configuration (ConfigurationID);
-ALTER TABLE 
-  Repetition 
-ADD 
-  CONSTRAINT FKRepetition783492 FOREIGN KEY (TestID) REFERENCES Test (TestID);
+  CONSTRAINT FKValue963375 FOREIGN KEY (ConfigurationID) REFERENCES Configuration (ConfigurationID);
