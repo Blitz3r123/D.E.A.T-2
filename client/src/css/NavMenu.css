@@ -5,11 +5,13 @@
 
 .list-group-unique{
     background-color: #fff;
-    height: 90vh;
+    height: 100vh;
     border-right: 1px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: start;
+    position: fixed;
+    width: 15%;
 }
 
 .navmenu-link{
