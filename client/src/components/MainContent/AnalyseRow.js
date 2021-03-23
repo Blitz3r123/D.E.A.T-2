@@ -13,7 +13,13 @@ export default class AnalyseRow extends Component{
 
             <div className="analyse-graphs-container">
 
-                
+                <Card>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
 
             </div>
 
