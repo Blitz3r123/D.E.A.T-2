@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
-import { HomeOutline, CreateOutline, StatsChartOutline } from 'react-ionicons';
+import { HomeOutline, CreateOutline, StatsChartOutline, PlayOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
 import './../css/NavMenu.css';
@@ -20,6 +20,13 @@ export default class NavMenu extends Component{
                     <ListGroup.Item>
                         <CreateOutline/>
                         <span style={{ marginLeft: 10 }}>Create</span>
+                    </ListGroup.Item>
+                </Link>
+
+                <Link to="/execute" className="navmenu-link">
+                    <ListGroup.Item>
+                        <PlayOutline/>
+                        <span style={{ marginLeft: 10 }}>Execute</span>
                     </ListGroup.Item>
                 </Link>
                 

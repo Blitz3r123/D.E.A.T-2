@@ -13,6 +13,7 @@ import './css/App.css';
 import NavMenu from './components/NavMenu';
 import MainContent from './components/MainContent';
 import CreateContent from './components/CreateContent';
+import ExecuteContent from './components/ExecuteContent';
 import AnalyseContent from './components/AnalyseContent';
 
 export default class App extends Component {
@@ -35,6 +36,10 @@ export default class App extends Component {
 
 						<Route exact path="/create">
 							<CreateContent />
+						</Route>
+
+						<Route exact path="/execute">
+							<ExecuteContent />
 						</Route>
 
 						<Route exact path="/analyse">
