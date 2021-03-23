@@ -1,0 +1,28 @@
+.analyse-graphs-container{
+    /* outline: 1px solid red; */
+
+    padding: 2vh 1vw;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.analyse-graphs-container > *{
+    /* outline: 1px solid red; */
+    width: auto;
+    height: auto;
+    margin-right: 1vw;
+    margin-bottom: 2vh;
+    flex-grow: 1;
+}
+
+img{
+    width: 100%;
+}
+
+.test-result-header{
+    text-align: center;
+}

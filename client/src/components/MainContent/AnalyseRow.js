@@ -14,6 +14,97 @@ export default class AnalyseRow extends Component{
             <div className="analyse-graphs-container">
 
                 <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
+
+                    <Card.Body>
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                    </Card.Body>
+
+                </Card>
+
+                <Card>
+                    <Card.Header className="test-result-header">
+                        Test Name
+                    </Card.Header>
 
                     <Card.Body>
                         <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
