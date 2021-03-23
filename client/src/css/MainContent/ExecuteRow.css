@@ -1,0 +1,27 @@
+.test-container{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1vw !important;
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+}
+
+.test-title{
+    margin-right: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    flex-wrap: wrap;
+    max-width: 10vw;
+}
+
+.test-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.test-actions > *:first-child{
+    margin-bottom: 2vh;
+}

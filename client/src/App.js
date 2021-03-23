@@ -20,14 +20,14 @@ export default class App extends Component {
 		return(
 		<Container fluid>
 			<Navbar bg="primary" fixed="top" sticky="top">
-				<Navbar.Brand style={{color: 'white'}}>D.E.A.T 2</Navbar.Brand>
+				<Navbar.Brand style={{color: 'white', paddingLeft: '2vw'}}>D.E.A.T 2</Navbar.Brand>
 			</Navbar>
 			<Row>
 				<Col sm={2} style={{paddingRight: 0}}>
 					<NavMenu />
 				</Col>
 				
-				<Col sm={10} style={{paddingLeft: 0}}>
+				<Col sm={10} style={{paddingLeft: 0, paddingRight: 0}}>
 					<Switch>
 						<Route exact path="/">
 							<MainContent />

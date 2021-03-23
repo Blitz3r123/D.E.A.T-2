@@ -1,5 +1,8 @@
 import react, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+import { Home, CogOutline, PlayOutline } from 'react-ionicons';
 
 import './../../css/MainContent/ExecuteRow.css';
 
@@ -18,9 +21,12 @@ export default class ExecuteRow extends Component{
                 <Card>
                     <Card.Body className="test-container">
                         <div className="test-title">
-
+                            test title that is so long we have to see what happens
                         </div>
                         <div className="test-actions">
+
+                            <Link to="create/test/12"><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
+                            <Link to="execute/test/12"><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
 
                         </div>
                     </Card.Body>

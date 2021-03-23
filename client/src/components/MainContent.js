@@ -10,7 +10,7 @@ import ExecuteRow from './MainContent/ExecuteRow';
 export default class MainContent extends Component{
     render(){
         return(
-            <div style={{padding: 10}}>
+            <div style={{padding: 10, paddingRight: 0, maxWidth: '84vw'}}>
 
                 {/* Create Row */}
                 <CreateRow />
