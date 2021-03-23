@@ -12,12 +12,26 @@ export default class ExecuteRow extends Component{
         super(props);
         this.state = {
             tests: [
-                'test one',
-                'test two', 
-                'test three',
-                'another test',
-                'and another one',
-                'and another'
+                {
+                    id: 1,
+                    title: 'test one'
+                },
+                {
+                    id: 1,
+                    title: 'test two'
+                },
+                {
+                    id: 1,
+                    title: 'test three'
+                },
+                {
+                    id: 1,
+                    title: 'another test'
+                },
+                {
+                    id: 1,
+                    title: 'and another one'
+                }
             ]
         };
     }
@@ -39,12 +53,12 @@ export default class ExecuteRow extends Component{
                     return <Card className="test-card">
                                 <Card.Body className="test-container">
                                     <div className="test-title">
-                                        {test}
+                                        {test.title}
                                     </div>
                                     <div className="test-actions">
 
-                                        <Link to="create/test/12"><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                                        <Link to="execute/test/12"><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
+                                        <Link to={"create/test/" + test.id}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
+                                        <Link to={"execute/test/" + test.id}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
 
                                     </div>
                                 </Card.Body>
