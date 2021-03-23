@@ -4,35 +4,15 @@ import { Link } from 'react-router-dom';
 
 import './../css/MainContent.css';
 
+import CreateRow from './MainContent/CreateRow';
+
 export default class MainContent extends Component{
     render(){
         return(
             <div style={{padding: 10}}>
 
                 {/* Create Row */}
-                <Card className="main-content-card">
-
-                    <Card.Header>
-                        Create
-                    </Card.Header>
-
-                    <div className="create-buttons-container">
-
-                        <Button variant="outline-primary">
-                            <Link to="/create/publisher">Publisher</Link>
-                        </Button>
-
-                        <Button variant="outline-primary">
-                            <Link to="/create/subscriber">Subscriber</Link>
-                        </Button>
-
-                        <Button variant="outline-primary">
-                            <Link to="/create/test">Test</Link>
-                        </Button>
-
-                    </div>
-
-                </Card>
+                <CreateRow />
 
                 {/* Execute Row */}
                 <Card className="main-content-card">
