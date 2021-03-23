@@ -9,26 +9,26 @@ export default class NavMenu extends Component{
     render(){
         return(
             <ListGroup className='list-group-unique'>
-                <ListGroup.Item>
-                    <Link to="/" className="navmenu-link">
+                <Link to="/" className="navmenu-link">
+                    <ListGroup.Item>
                         <HomeOutline/>
                         <span style={{ marginLeft: 10 }}>Home</span>
-                    </Link>
-                </ListGroup.Item>
+                    </ListGroup.Item>
+                </Link>
                 
-                <ListGroup.Item>
-                    <Link to="/create" className="navmenu-link">
+                <Link to="/create" className="navmenu-link">
+                    <ListGroup.Item>
                         <CreateOutline/>
                         <span style={{ marginLeft: 10 }}>Create</span>
-                    </Link>
-                </ListGroup.Item>
+                    </ListGroup.Item>
+                </Link>
                 
-                <ListGroup.Item>
-                    <Link to="/analyse" className="navmenu-link">
+                <Link to="/analyse" className="navmenu-link">
+                    <ListGroup.Item>
                         <StatsChartOutline/>
                         <span style={{ marginLeft: 10 }}>Analyse</span>
-                    </Link>
-                </ListGroup.Item>
+                   </ListGroup.Item>
+                </Link>
             </ListGroup>
         );
     }

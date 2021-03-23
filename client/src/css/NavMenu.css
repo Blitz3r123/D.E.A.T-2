@@ -1,5 +1,6 @@
 .navmenu-link:hover{
     text-decoration: none;
+    background-color: red;
 }
 
 .list-group-unique{
@@ -11,7 +12,12 @@
     justify-content: center;
 }
 
-.list-group-item:first-of-type{
+.navmenu-link{
+    width: 100%;
+    color: grey;
+}
+
+.navmenu-link:first-of-type{
     border-top: 1px solid #ccc !important;
 }
 
