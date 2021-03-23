@@ -23,21 +23,21 @@ export default class App extends Component {
 				<Navbar.Brand style={{color: 'white'}}>D.E.A.T 2</Navbar.Brand>
 			</Navbar>
 			<Row>
-				<Col sm={2}>
+				<Col sm={2} style={{paddingRight: 0}}>
 					<NavMenu />
 				</Col>
 				
-				<Col sm={10}>
+				<Col sm={10} style={{paddingLeft: 0}}>
 					<Switch>
 						<Route exact path="/">
 							<MainContent />
 						</Route>
 
-						<Route path="/create">
+						<Route exact path="/create">
 							<CreateContent />
 						</Route>
 
-						<Route path="/analyse">
+						<Route exact path="/analyse">
 							<AnalyseContent />
 						</Route>
 					</Switch>

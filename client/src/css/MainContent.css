@@ -1,0 +1,22 @@
+.main-content-card{
+    margin-bottom: 1vh;
+}
+
+.create-buttons-container{
+    display: flex;
+    padding: 2vh 1vw;
+}
+
+.create-buttons-container > Button {
+    margin-right: 1vw;
+}
+
+.create-buttons-container > Button > Link:hover{
+    text-decoration: none;
+    background-color: white;
+}
+
+.create-buttons-container > Button:hover{
+    background-color: white;
+    text-decoration: none;
+}
