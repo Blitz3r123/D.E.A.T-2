@@ -20,3 +20,13 @@
     background-color: white;
     text-decoration: none;
 }
+
+.create-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-button > *:first-child{
+    margin-right: 0.5vw;
+}
