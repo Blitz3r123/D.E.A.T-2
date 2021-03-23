@@ -10,7 +10,9 @@ export default class ExecuteRow extends Component{
     render(){
         return(
         <Card className="main-content-card">
-            <Card.Header>Execute</Card.Header>
+            <Card.Header style={{fontWeight: 'bold'}}>
+                Execute
+            </Card.Header>
 
             <div className="create-buttons-container">
 

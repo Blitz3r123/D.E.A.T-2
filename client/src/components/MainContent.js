@@ -3,6 +3,7 @@ import { Card, Col, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './../css/MainContent.css';
+import AnalyseRow from './MainContent/AnalyseRow';
 
 import CreateRow from './MainContent/CreateRow';
 import ExecuteRow from './MainContent/ExecuteRow';
@@ -19,10 +20,7 @@ export default class MainContent extends Component{
                 <ExecuteRow />
 
                 {/* Analyse Row */}
-                <Card className="main-content-card">
-                    <Card.Header>Analyse</Card.Header>
-
-                </Card>
+                <AnalyseRow />
                 
 
             </div>

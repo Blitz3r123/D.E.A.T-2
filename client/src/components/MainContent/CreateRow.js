@@ -7,7 +7,7 @@ export default class CreateRow extends Component{
         return(
             <Card className="main-content-card">
 
-                <Card.Header>
+                <Card.Header style={{fontWeight: 'bold'}}>
                     Create
                 </Card.Header>
 
