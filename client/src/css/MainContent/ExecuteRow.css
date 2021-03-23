@@ -1,3 +1,7 @@
+.test-card{
+    margin-right: 1vw;
+}
+
 .test-container{
     display: flex;
     justify-content: space-between;

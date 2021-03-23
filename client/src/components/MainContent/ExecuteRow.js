@@ -18,10 +18,24 @@ export default class ExecuteRow extends Component{
                     <Link to="/create/test">Create a Test</Link>
                 </Button> */}
 
-                <Card>
+                <Card className="test-card">
                     <Card.Body className="test-container">
                         <div className="test-title">
                             test title that is so long we have to see what happens
+                        </div>
+                        <div className="test-actions">
+
+                            <Link to="create/test/12"><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
+                            <Link to="execute/test/12"><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
+
+                        </div>
+                    </Card.Body>
+                </Card>
+
+                <Card className="test-card">
+                    <Card.Body className="test-container">
+                        <div className="test-title">
+                            another test
                         </div>
                         <div className="test-actions">
 
