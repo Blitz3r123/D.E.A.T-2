@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './../css/MainContent.css';
 
 import CreateRow from './MainContent/CreateRow';
+import ExecuteRow from './MainContent/ExecuteRow';
 
 export default class MainContent extends Component{
     render(){
@@ -15,18 +16,7 @@ export default class MainContent extends Component{
                 <CreateRow />
 
                 {/* Execute Row */}
-                <Card className="main-content-card">
-                    <Card.Header>Execute</Card.Header>
-
-                    <div className="create-buttons-container">
-
-                        <Button variant="outline-primary">
-                            <Link to="/create/test">Create a Test</Link>
-                        </Button>
-
-                    </div>
-
-                </Card>
+                <ExecuteRow />
 
                 {/* Analyse Row */}
                 <Card className="main-content-card">
