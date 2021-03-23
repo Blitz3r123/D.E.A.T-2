@@ -1,14 +1,13 @@
 CREATE TABLE Test (
-  TestID int(10) NOT NULL CHECK(Primary Key), 
+  TestID int(10) NOT NULL PRIMARY KEY, 
   TestName varchar(255), 
   StartDate date, 
   StartTime time, 
   EndDate date, 
-  EndTime time, 
-  CONSTRAINT TestID PRIMARY KEY (TestID)
+  EndTime time
 );
 CREATE TABLE TestResults (
-  TestResultsID int(10) NOT NULL AUTO_INCREMENT, 
+  TestResultsID int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   TestID int(10) NOT NULL, 
   TotalPacketsSent int(10), 
   TotalPacketsReceived int(10), 
@@ -27,7 +26,7 @@ CREATE TABLE ThroughputData (
   INDEX (TestResultsID)
 );
 CREATE TABLE PacketData (
-  PacketDataID int(10) NOT NULL AUTO_INCREMENT comment '                ', 
+  PacketDataID int(10) NOT NULL AUTO_INCREMENT, 
   TestResultsID int(10) NOT NULL, 
   OneWayLatencyUs int(10), 
   PRIMARY KEY (PacketDataID), 
