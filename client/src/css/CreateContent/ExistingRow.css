@@ -1,0 +1,32 @@
+.existing-row-empty-message-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.existing-row-empty-message-image{
+    width: 50%;
+    height: 50%;
+}
+
+.empty-message-container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-message-container img{
+    margin-bottom: 2vh;
+}
+
+.empty-message-container > *:last-child{
+    color: grey;
+    width: 50%;
+    text-align: center;
+}
+
+.empty-link{
+    text-decoration: underline;
+}
