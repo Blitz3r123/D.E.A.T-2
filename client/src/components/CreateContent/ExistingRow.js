@@ -13,11 +13,11 @@ export default class ExistingRow extends Component{
         super(props);
         this.state = {
             tests: [
-                {id: 1, title: 'test 1'},
-                {id: 2, title: 'test 2'},
-                {id: 3, title: 'test 3'},
-                {id: 4, title: 'test 4'},
-                {id: 5, title: 'test 5'}
+                {id: 1, title: 'test 1', status: 'standing by'},
+                {id: 2, title: 'test 2', status: 'running'},
+                {id: 3, title: 'test 3', status: 'complete'},
+                {id: 4, title: 'test 4', status: 'standing by'},
+                {id: 5, title: 'test 5', status: 'standing by'}
             ],
             publishers: [
                 {id: 1},

@@ -4,13 +4,24 @@ import { Link } from 'react-router-dom';
 import { CogOutline, PlayOutline } from 'react-ionicons';
 
 export default class TestCard extends Component{
+    constructor(props){
+        super(props);
+        if(this.props.test.status == 'standing by'){
+            this.props.test.variant = 'warning';
+        }else if(this.props.test.status == 'running'){
+            this.props.test.variant = 'success';
+        }else{
+            this.props.test.variant = 'danger';
+        }
+    }
+
     render(){
         return(
             <Card className="test-card">
                 <Card.Body className="test-container">
                     <div className="test-title">
                         {this.props.test.title}
-                        <Badge pill variant="secondary">Standing by</Badge>
+                        <Badge pill variant={this.props.test.variant}>{this.props.test.status}</Badge>
                     </div>
                     <div className="test-actions">
 
