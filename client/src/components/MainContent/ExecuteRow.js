@@ -46,12 +46,6 @@ export default class ExecuteRow extends Component{
         
     }
 
-    componentDidMount(){
-        var renderTests = this.state.tests.map(test => {
-            return <TestCard test={test} />
-        })
-    }
-
     render(){
         return(
         <Card className="main-content-card">
@@ -61,7 +55,9 @@ export default class ExecuteRow extends Component{
 
             <div className="execute-buttons-container">
 
-                {/* <EmptyTestMessage /> */}
+                {
+                    this.state.tests.length === 0 ? <EmptyTestMessage /> : null
+                }
 
                 {
                     this.state.tests.map(test => {
