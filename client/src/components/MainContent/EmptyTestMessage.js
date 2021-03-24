@@ -8,7 +8,7 @@ export default class EmptyTestMessage extends Component{
         return(
             <div className="empty-tests-container">
                 <img src={CogWheel}></img>
-                <p>Looks like you don't have any tests....Why not <Link to="/create/test">create</Link> one?</p>
+                <p>Looks like you don't have any tests....Why not <Link style={{textDecoration: 'underline'}} to="/create/test">create</Link> one?</p>
             </div>
         );
     }

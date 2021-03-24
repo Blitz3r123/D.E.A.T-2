@@ -15,31 +15,31 @@ export default class ExecuteRow extends Component{
         super(props);
         this.state = {
             tests: [
-                {
-                    id: 1,
-                    title: 'test one',
-                    status: 'standing by'
-                },
-                {
-                    id: 1,
-                    title: 'test two',
-                    status: 'standing by'
-                },
-                {
-                    id: 1,
-                    title: 'test three',
-                    status: 'standing by'
-                },
-                {
-                    id: 1,
-                    title: 'another test',
-                    status: 'standing by'
-                },
-                {
-                    id: 1,
-                    title: 'and another one',
-                    status: 'standing by'
-                }
+                // {
+                //     id: 1,
+                //     title: 'test one',
+                //     status: 'standing by'
+                // },
+                // {
+                //     id: 1,
+                //     title: 'test two',
+                //     status: 'standing by'
+                // },
+                // {
+                //     id: 1,
+                //     title: 'test three',
+                //     status: 'standing by'
+                // },
+                // {
+                //     id: 1,
+                //     title: 'another test',
+                //     status: 'standing by'
+                // },
+                // {
+                //     id: 1,
+                //     title: 'and another one',
+                //     status: 'standing by'
+                // }
             ]
         };
 
