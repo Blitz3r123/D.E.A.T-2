@@ -6,6 +6,8 @@ import { Home, CogOutline, PlayOutline } from 'react-ionicons';
 
 import './../../css/MainContent/ExecuteRow.css';
 
+import TestCard from './../TestCard';
+
 export default class ExecuteRow extends Component{
     
     constructor(props){
@@ -14,23 +16,28 @@ export default class ExecuteRow extends Component{
             tests: [
                 {
                     id: 1,
-                    title: 'test one'
+                    title: 'test one',
+                    status: 'standing by'
                 },
                 {
                     id: 1,
-                    title: 'test two'
+                    title: 'test two',
+                    status: 'standing by'
                 },
                 {
                     id: 1,
-                    title: 'test three'
+                    title: 'test three',
+                    status: 'standing by'
                 },
                 {
                     id: 1,
-                    title: 'another test'
+                    title: 'another test',
+                    status: 'standing by'
                 },
                 {
                     id: 1,
-                    title: 'and another one'
+                    title: 'and another one',
+                    status: 'standing by'
                 }
             ]
         };
@@ -50,35 +57,8 @@ export default class ExecuteRow extends Component{
                 </Button> */}
 
                 {this.state.tests.map(test => {
-                    return <Card className="test-card">
-                                <Card.Body className="test-container">
-                                    <div className="test-title">
-                                        {test.title}
-                                    </div>
-                                    <div className="test-actions">
-
-                                        <Link to={"create/test/" + test.id}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                                        <Link to={"execute/test/" + test.id}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
-
-                                    </div>
-                                </Card.Body>
-                            </Card>
+                    return <TestCard test={test} />
                 })}
-
-
-                <Card className="test-card">
-                    <Card.Body className="test-container">
-                        <div className="test-title">
-                            another test
-                        </div>
-                        <div className="test-actions">
-
-                            <Link to="create/test/12"><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                            <Link to="execute/test/12"><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
-
-                        </div>
-                    </Card.Body>
-                </Card>
 
             </div>
 
