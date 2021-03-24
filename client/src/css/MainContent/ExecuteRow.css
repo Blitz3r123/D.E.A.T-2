@@ -20,8 +20,9 @@
 .test-title{
     margin-right: 2vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     color: grey;
     flex-wrap: wrap;
     max-width: 10vw;

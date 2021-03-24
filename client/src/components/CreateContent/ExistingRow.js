@@ -6,6 +6,8 @@ import { CogOutline, PlayOutline } from 'react-ionicons';
 import './../../css/CreateContent/ExistingRow.css';
 import emptyImage from './../../assets/EmptyExistingRowImage2.jpg';
 
+import TestCard from './../TestCard';
+
 export default class ExistingRow extends Component{
     constructor(props){
         super(props);
@@ -52,47 +54,9 @@ export default class ExistingRow extends Component{
 
                     <div className="existing-row-container">
 
-                        <Card className="test-card">
-                            <Card.Body className="test-container">
-                                <div className="test-title">
-                                    test title
-                                </div>
-                                <div className="test-actions">
-
-                                    <Link to={"create/test/" + 1}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                                    <Link to={"execute/test/" + 1}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
-
-                                </div>
-                            </Card.Body>
-                        </Card>
-
-                        <Card className="test-card">
-                            <Card.Body className="test-container">
-                                <div className="test-title">
-                                    test title
-                                </div>
-                                <div className="test-actions">
-
-                                    <Link to={"create/test/" + 1}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                                    <Link to={"execute/test/" + 1}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
-
-                                </div>
-                            </Card.Body>
-                        </Card>
-
-                        <Card className="test-card">
-                            <Card.Body className="test-container">
-                                <div className="test-title">
-                                    test title
-                                </div>
-                                <div className="test-actions">
-
-                                    <Link to={"create/test/" + 1}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                                    <Link to={"execute/test/" + 1}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
-
-                                </div>
-                            </Card.Body>
-                        </Card>
+                        {this.state.tests.map(test => {
+                            return <TestCard test={test} />
+                        })}
 
                     </div>
 
