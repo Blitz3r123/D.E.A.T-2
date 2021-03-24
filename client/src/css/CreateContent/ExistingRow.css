@@ -36,3 +36,17 @@
     justify-content: start;
     flex-wrap: wrap;
 }
+
+.existing-row-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-button-dropdown{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-dropdown-item > *:hover{
+    text-decoration: none;
+}

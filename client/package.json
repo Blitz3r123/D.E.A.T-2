@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "@fontsource/roboto": "^4.2.2",
-    "bootstrap": "^4.6.0",
     "react-bootstrap": "^1.5.2",
     "styled-components": "^5.2.1"
   }
