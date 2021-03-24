@@ -17,7 +17,7 @@ export default class TestCard extends Component{
 
     render(){
         return(
-            <Card className="test-card">
+            <Card className="test-card" bg="light">
                 <Card.Body className="test-container">
                     <div className="test-title">
                         {this.props.test.title}
