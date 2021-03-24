@@ -1,12 +1,13 @@
 import react, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-
-import { Home, CogOutline, PlayOutline } from 'react-ionicons';
 
 import './../../css/MainContent/ExecuteRow.css';
 
 import TestCard from './../TestCard';
+import EmptyTestMessage from './../MainContent/EmptyTestMessage';
+
+import CogWheel from './../../assets/CogWheel.jpg';
+import { CloudyNight } from 'react-ionicons';
 
 export default class ExecuteRow extends Component{
     
@@ -41,6 +42,14 @@ export default class ExecuteRow extends Component{
                 }
             ]
         };
+
+        
+    }
+
+    componentDidMount(){
+        var renderTests = this.state.tests.map(test => {
+            return <TestCard test={test} />
+        })
     }
 
     render(){
@@ -52,13 +61,13 @@ export default class ExecuteRow extends Component{
 
             <div className="execute-buttons-container">
 
-                {/* <Button variant="outline-primary">
-                    <Link to="/create/test">Create a Test</Link>
-                </Button> */}
+                {/* <EmptyTestMessage /> */}
 
-                {this.state.tests.map(test => {
-                    return <TestCard test={test} />
-                })}
+                {
+                    this.state.tests.map(test => {
+                        return <TestCard test={test} />
+                    })
+                }
 
             </div>
 

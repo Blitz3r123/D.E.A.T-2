@@ -23,7 +23,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    color: grey;
     flex-wrap: wrap;
     max-width: 10vw;
 }
@@ -36,4 +35,21 @@
 
 .test-actions > *:first-child{
     margin-bottom: 2vh;
+}
+
+.empty-tests-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.empty-tests-container img{
+    width: 25%; 
+    margin-top: -2vh;
+}
+
+.empty-tests-container p{
+    margin-top: -4vh;
+    color: grey;
 }
