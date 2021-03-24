@@ -1,7 +1,7 @@
 import react, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { CogOutline, PlayOutline } from 'react-ionicons';
+import { AddOutline } from 'react-ionicons';
 
 import './../../css/CreateContent/ExistingRow.css';
 import emptyImage from './../../assets/EmptyExistingRowImage2.jpg';
@@ -38,7 +38,19 @@ export default class ExistingRow extends Component{
     render(){
         return(
             <Card>
-                <Card.Header style={{fontWeight: 'bold'}}>Existing Participants/Tests</Card.Header>
+                <Card.Header style={{fontWeight: 'bold'}} className="existing-row-header">
+                    <span>Existing Participants/Tests</span>
+                    <Dropdown className="create-dropdown-container">
+                        <Dropdown.Toggle variant="primary" className="create-button-dropdown">
+                            <AddOutline color="white"/>Create
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/publisher">Publisher</Link></Dropdown.Item>
+                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/subscriber">Subscriber</Link></Dropdown.Item>
+                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/test">Test</Link></Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Card.Header>
                 <Card.Body>
 
                     {/* <div className="existing-row-empty-message-container">
