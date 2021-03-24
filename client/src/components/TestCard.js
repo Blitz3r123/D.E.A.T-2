@@ -1,7 +1,7 @@
 import react, { Component } from 'react';
 import { Card, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { CogOutline, PlayOutline } from 'react-ionicons';
+import { Cog, Play } from 'react-ionicons';
 
 export default class TestCard extends Component{
     constructor(props){
@@ -25,8 +25,8 @@ export default class TestCard extends Component{
                     </div>
                     <div className="test-actions">
 
-                        <Link to={"create/test/" + this.props.test.id}><CogOutline color="grey" title="Edit Test Settings"></CogOutline></Link>
-                        <Link to={"execute/test/" + this.props.test.id}><PlayOutline color="green" title="Start Test"></PlayOutline></Link>
+                        <Link to={"create/test/" + this.props.test.id}><Cog color="grey" title="Edit Test Settings"></Cog></Link>
+                        <Link to={"execute/test/" + this.props.test.id}><Play color="green" title="Start Test"></Play></Link>
 
                     </div>
                 </Card.Body>
