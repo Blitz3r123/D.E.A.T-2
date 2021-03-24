@@ -15,6 +15,10 @@ export default class NewTestRow extends Component{
         };
     }
 
+    handleChange = event => {
+        this.setState({ testname: event.target.value });
+    }
+
     render(){
         return(
             <Card style={{marginTop: '2vh'}}>
@@ -24,8 +28,13 @@ export default class NewTestRow extends Component{
                         <img src={NewTestImage}></img>
                         <p>Create a new test by giving it a name...</p>
                         <div className="new-test-form">
-                            <input type="text" placeholder="Your Test Name Here"></input>
-                            <Link to={"/create/test?testname=" + this.state.testName}>
+                            <input 
+                                type="text" 
+                                placeholder="Test Name Here" 
+                                value={this.state.testname}
+                                onChange={this.handleChange}
+                            ></input>
+                            <Link to={"/create/test?testname=" + this.state.testname}>
                                 <ArrowForward color='#28a745'/>
                             </Link>
                         </div>
