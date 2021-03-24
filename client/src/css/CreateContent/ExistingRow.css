@@ -30,3 +30,9 @@
 .empty-link{
     text-decoration: underline;
 }
+
+.existing-row-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
