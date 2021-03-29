@@ -1,2 +1,4 @@
 node_modules/
 WORKSPACE.code-workspace
+/server/.env
+*/.env
