@@ -50,6 +50,12 @@
 
 .test-col-accordion-list{
     margin-top: 2vh;
+    overflow-y: scroll;
+    max-height: 65vh;
+}
+
+.test-col-accordion-list > *{
+    margin-top: 2vh;
 }
 
 .test-accordion-shown{

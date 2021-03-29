@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 import './../../css/ExecuteContent/TestsCol.css';
 
+import TestCard from './TestCard';
+
 export default class TestsCol extends Component{
     render(){
         return(
@@ -31,46 +33,12 @@ export default class TestsCol extends Component{
 
                     <div className="test-col-accordion-list">
 
-                        <Accordion>
-                            <Card>
-                                <Card.Body>
-
-                                    <div className="test-accordion-shown">
-                                        <div className="test-details">
-                                            <p>TestName</p>
-                                            <p>Pending</p>
-                                        </div>
-
-                                        <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                            <CaretDownOutline className="test-accordion-show-button" />
-                                        </Accordion.Toggle>
-                                    </div>
-
-                                    <Accordion.Collapse eventKey="0">
-                                        <div className="test-accordion-hidden-container">
-                                            <div className="test-actions-container">
-                                                <Settings color="grey" title="Edit Test"/>
-                                                <Play title="Start Test" color="#28a745"/>
-                                            </div>
-                                            <div className="test-accordion-hidden">
-                                                <div className="test-connection-container">
-                                                    <DesktopOutline className="test-connection-icon" />
-                                                    <div className="test-connection-details">
-                                                        <p>MachineName</p>
-                                                        <p>hostname.city.ac.uk</p>
-                                                    </div>
-                                                </div>
-                                                <div className="test-connection-actions-container">
-                                                    <PencilOutline title="Edit Connection" style={{marginRight: "1vw"}}/>
-                                                    <FolderOpenOutline className="test-connection-folder-icon" title="View Files" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Accordion.Collapse>
-
-                                </Card.Body>
-                            </Card>
-                        </Accordion>
+                        <TestCard />
+                        <TestCard />
+                        <TestCard />
+                        <TestCard />
+                        <TestCard />
+                        <TestCard />
 
                     </div>
 
