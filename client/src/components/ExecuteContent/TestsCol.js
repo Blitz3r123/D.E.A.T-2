@@ -17,11 +17,6 @@ export default class TestsCol extends Component{
                     <p>Tests</p>
                     
                     <input type="text" placeholder="Search for a test"></input>
-                    
-                    <div className="tests-icon-group">
-                        <ListOutline color={"grey"}/>
-                        <GridOutline color={"grey"} />
-                    </div>
 
                 </Card.Header>
                 
