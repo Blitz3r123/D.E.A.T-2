@@ -1,3 +1,8 @@
 .execute-content-row{
     padding: 2vh 1vw;
 }
+
+.connections-col-container{
+    /* outline: 1px solid black; */
+    margin-right: 2vw;
+}

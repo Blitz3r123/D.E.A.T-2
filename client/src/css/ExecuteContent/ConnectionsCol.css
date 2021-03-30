@@ -1,0 +1,47 @@
+
+
+.conn-details{
+    /* outline: 1px solid black; */
+    display: flex;
+    justify-content: start;
+    padding-top: 2vh;
+}
+
+.conn-details p{
+    font-size: 1.2em;
+    margin-left: 0.5vw;
+}
+
+.conn-accordion-hidden-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conn-detail-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 1vh;
+    color: grey;
+    font-size: 0.8em;
+}
+
+.conn-detail-container span:last-of-type{
+    margin-left: 1vw;
+}
+
+.conn-actions-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.conn-actions-container > *:hover{
+    cursor: pointer;
+}
+
+.conn-action-link{
+    margin-bottom: 1vh !important;
+    margin-right: 1vw;
+}
