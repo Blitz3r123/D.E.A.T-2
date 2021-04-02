@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Accordion, Button } from 'react-bootstrap';
-import { Add, CaretDownSharp } from 'react-ionicons';
+import { Add, CaretDownSharp, Remove } from 'react-ionicons';
 
 import './../../css/AnalyseContent.css';
 import './../../css/Global.css';
@@ -13,7 +13,7 @@ export default class TestCard extends Component{
                     <Card.Body>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
                             <span style={{fontSize: '1.2em'}}>TestName</span>
-                            <Add color='#28a745' />
+                            {!this.props.added ? <Add color='#28a745' /> : <Remove color='#dc3545'/>}
                             <Accordion.Toggle as={Button} variant="link" eventKey="0">
                                 <CaretDownSharp />
                             </Accordion.Toggle>

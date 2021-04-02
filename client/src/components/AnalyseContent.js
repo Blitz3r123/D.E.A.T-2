@@ -36,8 +36,27 @@ export default class AnalyseContent extends Component{
                     </Card>
 
                 </Col>
-                <Col className="analyse-added-tests-list-container">
-                    
+                <Col className="analyse-added-tests-list-container" style={{marginRight: '2vw'}}>
+                    <Card>
+
+                        <Card.Header className="space-between">
+                            <span style={{fontWeight: 'bold'}}>Tests for Analysis</span>
+                            <input id="completed-test-search-input" type="text" placeholder="Search for a test"></input>
+                        </Card.Header>
+
+                        <Card.Body style={{maxHeight: '78vh', overflowY: 'scroll'}}>
+
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+                            <TestCard added={true} />
+
+                        </Card.Body>
+
+                    </Card>
                 </Col>
             </Row>
         );
