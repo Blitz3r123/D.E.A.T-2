@@ -1,0 +1,10 @@
+.analyse-content-row{
+    padding-top: 2vh;
+}
+
+#completed-test-search-input{
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0vh 1vw;
+}
