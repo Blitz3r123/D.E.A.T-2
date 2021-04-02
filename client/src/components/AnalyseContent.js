@@ -5,6 +5,8 @@ import { Add, CaretDownSharp } from 'react-ionicons';
 import './../css/AnalyseContent.css';
 import './../css/Global.css';
 
+import TestCard from './AnalyseContent/TestCard';
+
 export default class AnalyseContent extends Component{
     render(){
         return(
@@ -18,57 +20,16 @@ export default class AnalyseContent extends Component{
                             <input id="completed-test-search-input" type="text" placeholder="Search for a test"></input>
                         </Card.Header>
 
-                        <Card.Body>
+                        <Card.Body style={{maxHeight: '78vh', overflowY: 'scroll'}}>
 
-                            <Accordion>
-                                <Card style={{marginTop: '2vh'}}>
-                                    <Card.Body>
-                                        <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                                            <span style={{fontSize: '1.2em'}}>TestName</span>
-                                            <Add color='#28a745' />
-                                            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                                <CaretDownSharp />
-                                            </Accordion.Toggle>
-                                        </div>
-
-                                        <Accordion.Collapse eventKey="0">
-                                            <div className="test-summary-container">
-
-                                                <div 
-                                                    className="pubsub-container" 
-                                                    style={{
-                                                        display: 'flex', 
-                                                        justifyContent: 'space-evenly', 
-                                                        color: 'grey'
-                                                    }}
-                                                >
-                                                    <span>1 Publisher</span>
-                                                    <span>1 Subscriber</span>
-                                                </div>
-
-                                                <p style={{display: 'flex', justifyContent: 'space-between', color: '#007bff', padding: '0vh 1vw'}}>
-                                                    <span>Best Effort</span>
-                                                    <span>True</span>
-                                                </p>
-
-                                                <p style={{display: 'flex', justifyContent: 'space-between', color: '#007bff', padding: '0vh 1vw'}}>
-                                                    <span>Best Effort</span>
-                                                    <span>True</span>
-                                                </p>
-
-                                                <p style={{display: 'flex', justifyContent: 'space-between', color: '#007bff', padding: '0vh 1vw'}}>
-                                                    <span>Best Effort</span>
-                                                    <span>True</span>
-                                                </p>
-
-                                            </div>
-                                        </Accordion.Collapse>
-
-                                    </Card.Body>
-                                </Card>
-                            </Accordion>
-
-                            
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
+                            <TestCard />
 
                         </Card.Body>
 
