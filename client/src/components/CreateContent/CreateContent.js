@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './../css/CreateContent.css';
+import './CreateContent.css';
 
-import ExistingRow from './../components/CreateContent/ExistingRow';
-import NewTestRow from './../components/CreateContent/NewTestRow';
+import ExistingRow from './ExistingRow/ExistingRow';
+import NewTestRow from './NewTestRow/NewTestRow';
 
 export default class CreateContent extends Component{
     render(){

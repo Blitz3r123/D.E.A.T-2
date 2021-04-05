@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col, Card, Accordion, Button } from 'react-bootstrap';
-import { Add, CaretDownSharp } from 'react-ionicons';
 
-import './../css/AnalyseContent.css';
-import './../css/Global.css';
+import './AnalyseContent.css';
+import './../../Global.css';
 
-import TestCard from './AnalyseContent/TestCard';
+import TestCard from './TestCard/TestCard';
 
 export default class AnalyseContent extends Component{
     render(){
@@ -22,14 +21,12 @@ export default class AnalyseContent extends Component{
 
                         <Card.Body style={{maxHeight: '78vh', overflowY: 'scroll'}}>
 
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
-                            <TestCard />
+                            <TestCard added={false}/>
+                            <TestCard added={false}/>
+                            <TestCard added={false}/>
+                            <TestCard added={false}/>
+                            <TestCard added={false}/>
+                            <TestCard added={false}/>
 
                         </Card.Body>
 

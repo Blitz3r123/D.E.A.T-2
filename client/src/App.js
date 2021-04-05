@@ -8,13 +8,13 @@ import {
 } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom';
 
-import './css/App.css';
+import './App.css';
 
-import NavMenu from './components/NavMenu';
-import MainContent from './components/MainContent';
-import CreateContent from './components/CreateContent';
-import ExecuteContent from './components/ExecuteContent';
-import AnalyseContent from './components/AnalyseContent';
+import NavMenu from './components/NavMenu/NavMenu';
+import MainContent from './components/MainContent/MainContent';
+import CreateContent from './components/CreateContent/CreateContent';
+import ExecuteContent from './components/ExecuteContent/ExecuteContent';
+import AnalyseContent from './components/AnalyseContent/AnalyseContent';
 
 export default class App extends Component {
 	render(){

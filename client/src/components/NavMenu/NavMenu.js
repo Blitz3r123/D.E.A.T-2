@@ -3,7 +3,7 @@ import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import { HomeOutline, CreateOutline, StatsChartOutline, PlayOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
-import './../css/NavMenu.css';
+import './NavMenu.css';
 
 export default class NavMenu extends Component{
     render(){

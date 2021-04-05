@@ -3,10 +3,10 @@ import { Card, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AddOutline } from 'react-ionicons';
 
-import './../../css/CreateContent/ExistingRow.css';
+import './ExistingRow.css';
 
-import TestCard from './../TestCard';
-import EmptyMessage from './EmptyMessage';
+import TestCard from './../../TestCard/TestCard';
+import EmptyMessage from './../EmptyMessage/EmptyMessage';
 
 export default class ExistingRow extends Component{
     constructor(props){

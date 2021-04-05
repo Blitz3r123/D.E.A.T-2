@@ -3,9 +3,9 @@ import { Card } from 'react-bootstrap';
 import { ArrowForward } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
-import './../../css/CreateContent/NewTestRow.css';
+import './NewTestRow.css';
 
-import NewTestImage from './../../assets/EmptyExistingRowImage.jpg';
+import NewTestImage from './../../../assets/EmptyExistingRowImage.jpg';
 
 export default class NewTestRow extends Component{
     constructor(props){

@@ -3,9 +3,9 @@ import { Accordion, Card, Button } from 'react-bootstrap';
 import { ListOutline, GridOutline, Add, CaretDownOutline, DesktopOutline, FolderOpenOutline, SettingsOutline, PlayOutline, PencilOutline, Play, Settings } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
-import './../../css/ExecuteContent/TestsCol.css';
+import './TestsCol.css';
 
-import TestCard from './TestCard';
+import TestCard from './../TestCard/TestCard';
 
 export default class TestsCol extends Component{
     render(){

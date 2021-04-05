@@ -1,7 +1,7 @@
 import react, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import CogWheel from './../../assets/CogWheel.jpg';
+import CogWheel from './../../../assets/CogWheel.jpg';
 
 export default class EmptyTestMessage extends Component{
     render(){

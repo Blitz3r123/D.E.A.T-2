@@ -1,7 +1,7 @@
 import react, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
-import './../../css/MainContent/AnalyseRow.css';
+import './AnalyseRow.css';
 
 export default class AnalyseRow extends Component{
     render(){

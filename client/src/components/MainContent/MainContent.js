@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Card, Col, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import './../css/MainContent.css';
-import AnalyseRow from './MainContent/AnalyseRow';
+import './MainContent.css';
+import AnalyseRow from './AnalyseRow/AnalyseRow';
 
-import CreateRow from './MainContent/CreateRow';
-import ExecuteRow from './MainContent/ExecuteRow';
+import CreateRow from './CreateRow/CreateRow';
+import ExecuteRow from './ExecuteRow/ExecuteRow';
 
 export default class MainContent extends Component{
     render(){

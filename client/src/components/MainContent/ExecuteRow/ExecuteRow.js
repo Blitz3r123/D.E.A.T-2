@@ -1,13 +1,10 @@
 import react, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-import './../../css/MainContent/ExecuteRow.css';
+import './ExecuteRow.css';
 
-import TestCard from './../TestCard';
-import EmptyTestMessage from './../MainContent/EmptyTestMessage';
-
-import CogWheel from './../../assets/CogWheel.jpg';
-import { CloudyNight } from 'react-ionicons';
+import TestCard from './../../TestCard/TestCard';
+import EmptyTestMessage from './../EmptyTestMessage/EmptyTestMessage';
 
 export default class ExecuteRow extends Component{
     

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Accordion, Button } from 'react-bootstrap';
+import { Card, Accordion, Button } from 'react-bootstrap';
 import { Add, CaretDownSharp, Remove } from 'react-ionicons';
 
-import './../../css/AnalyseContent.css';
-import './../../css/Global.css';
+import './../AnalyseContent.css';
+import './../../../Global.css';
 
 export default class TestCard extends Component{
     render(){

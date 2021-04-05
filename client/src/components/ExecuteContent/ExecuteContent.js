@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import TestsCol from './ExecuteContent/TestsCol';
-import ConnectionsCol from './ExecuteContent/ConnectionsCol';
+import TestsCol from './TestsCol/TestsCol';
+import ConnectionsCol from './ConnectionsCol/ConnectionsCol';
 
-import './../css/ExecuteContent.css';
+import './ExecuteContent.css';
 
 export default class ExecuteContent extends Component{
     render(){

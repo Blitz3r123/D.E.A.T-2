@@ -3,7 +3,7 @@ import { Accordion, Card, Button, Badge } from 'react-bootstrap';
 import { CaretDownOutline, DesktopOutline, Add, PersonOutline, KeyOutline, WifiOutline, SettingsOutline, SpeedometerOutline, FolderOpenOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 
-import './../../css/ExecuteContent/ConnectionsCol.css';
+import './ConnectionsCol.css';
 import ConnCard from './ConnCard';
 
 export default class ConnectionsCol extends Component{
