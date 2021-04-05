@@ -40,14 +40,14 @@ export default class ExistingRow extends Component{
         return(
             <Card>
                 <Card.Header style={{fontWeight: 'bold'}} className="existing-row-header">
-                    <span>Existing Participants/Tests</span>
+                    <span>Existing Templates/Tests</span>
                     <Dropdown className="create-dropdown-container">
                         <Dropdown.Toggle variant="primary" className="create-button-dropdown">
                             <AddOutline color="white"/>Create
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/publisher">Publisher</Link></Dropdown.Item>
-                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/subscriber">Subscriber</Link></Dropdown.Item>
+                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/publisher">Publisher Template</Link></Dropdown.Item>
+                            <Dropdown.Item className="create-dropdown-item"><Link to="/create/subscriber">Subscriber Template</Link></Dropdown.Item>
                             <Dropdown.Item className="create-dropdown-item"><Link to="/create/test">Test</Link></Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>

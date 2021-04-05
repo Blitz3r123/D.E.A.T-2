@@ -14,14 +14,14 @@ export default class CreateRow extends Component{
 
                 <div className="create-buttons-container">
 
-                    <Button variant="outline-primary" className="create-button" title="Create a new publisher">
+                    <Button variant="outline-primary" className="create-button" title="Create a new publisher template">
                         <CloudUploadOutline color="#007bff"/>
-                        <Link to="/create/publisher">Publisher</Link>
+                        <Link to="/create/publisher">Publisher Template</Link>
                     </Button>
 
-                    <Button variant="outline-primary" className="create-button" title="Create a new subscriber">
+                    <Button variant="outline-primary" className="create-button" title="Create a new subscriber template">
                         <CloudDownloadOutline color="#007bff"/>
-                        <Link to="/create/subscriber">Subscriber</Link>
+                        <Link to="/create/subscriber">Subscriber Template</Link>
                     </Button>
 
                     <Button variant="outline-primary" className="create-button" title="Create a new test">
