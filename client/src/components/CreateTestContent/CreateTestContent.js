@@ -1,9 +1,31 @@
 import react, { Component } from 'react';
 import { ArrowForwardOutline } from 'react-ionicons';
+import { Redirect } from 'react-router-dom';
 
 import EmptyImage from './../../assets/EmptyExistingRowImage.jpg';
 
+import './CreateTestContent.css';
+
 export default class CreateTestContent extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            testname: ''
+        };
+    }
+
+    handleClick = () => {
+        if(this.state.testname.length == 0){
+            alert("Test name can't be empty.");
+        }else{
+            /*
+                1. Create test in database
+                2. Get key of recently created test
+                3. Redirec to /test/settings/:testid
+            */
+        }
+    }
+
     render(){
         return(
             <div 
@@ -26,7 +48,10 @@ export default class CreateTestContent extends Component {
                     alignItems: 'center'
                 }}>
                     <input 
-                        type="text" 
+                        type="text"
+                        onChange={e => {
+                            this.setState({testname: e.target.value});
+                        }}
                         placeholder="Enter a test name"
                         style={{
                             outline: 'none',
@@ -34,7 +59,7 @@ export default class CreateTestContent extends Component {
                             padding: '1vh 1vw',
                             marginRight: '1vw'
                         }}/>
-                    <ArrowForwardOutline color="#28a745"/>
+                    <ArrowForwardOutline className="submit-button" onClick={this.handleClick} color="#28a745"/>
                 </div>
 
             </div>
