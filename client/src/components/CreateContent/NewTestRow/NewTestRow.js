@@ -34,7 +34,7 @@ export default class NewTestRow extends Component{
                                 value={this.state.testname}
                                 onChange={this.handleChange}
                             ></input>
-                            <Link to={"/create/test?testname=" + this.state.testname}>
+                            <Link to={"/create/test/" + this.state.testname}>
                                 <ArrowForward color='#28a745'/>
                             </Link>
                         </div>

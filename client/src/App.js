@@ -13,6 +13,7 @@ import './App.css';
 import NavMenu from './components/NavMenu/NavMenu';
 import MainContent from './components/MainContent/MainContent';
 import CreateContent from './components/CreateContent/CreateContent';
+import CreateTestContent from './components/CreateTestContent/CreateTestContent';
 import ExecuteContent from './components/ExecuteContent/ExecuteContent';
 import AnalyseContent from './components/AnalyseContent/AnalyseContent';
 
@@ -37,10 +38,14 @@ export default class App extends Component {
 						<Route exact path="/create">
 							<CreateContent />
 						</Route>
+						
+						<Route path="/create/test/:testname" component={CreateTestContent}/>
+						<Route path="/create/test/" component={CreateTestContent}/>
 
 						<Route exact path="/execute">
 							<ExecuteContent />
 						</Route>
+
 
 						<Route exact path="/analyse">
 							<AnalyseContent />

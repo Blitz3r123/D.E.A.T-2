@@ -1,21 +1,26 @@
 var mysql = require('mysql');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-var con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'pa55word',
-    database: 'deat'
+const app = express();
+const port = 4000;
+
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({extended: true})
+);
+
+app.get('/create/test/:testname', (req, res, next) => {
+    console.log(req.params.testname);
 });
 
-con.connect(err => {
-    if (err) throw err;
-    console.log('conected');
+app.listen(port, () => {
+    console.log('Server listening at localhost:' + port);
+});
 
-    con.query('select * from test', (err, results) => {
-        if(err) console.log(err);
-        results.forEach(result => {
-            console.log(result);
-        });
-    });
-
+var con = mysql.createConnection({
+    host: 'smcse-stuproj00.city.ac.uk',
+    user: 'deat',
+    password: 'y2mPH2ZhCX',
+    database: 'deat2'
 });
