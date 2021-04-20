@@ -2,7 +2,6 @@ import axios from 'axios';
 
 import react, { Component } from 'react';
 import { ArrowForwardOutline } from 'react-ionicons';
-import { Redirect } from 'react-router-dom';
 
 import EmptyImage from './../../assets/EmptyExistingRowImage.jpg';
 
