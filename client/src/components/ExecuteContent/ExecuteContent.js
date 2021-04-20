@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
-
-import TestsCol from './TestsCol/TestsCol';
-import ConnectionsCol from './ConnectionsCol/ConnectionsCol';
+import { Row, Col, Card, ListGroup } from 'react-bootstrap';
+import { AddOutline, TrashOutline } from 'react-ionicons';
 
 import './ExecuteContent.css';
+
+import TestListItem from './TestListItem/TestListItem';
 
 export default class ExecuteContent extends Component{
     render(){
         return(
             <Row className="execute-content-row">
-                <Col>
-                    <TestsCol />
-                </Col>
-                <Col className="connections-col-container">
-                    <ConnectionsCol />
-                </Col>
+                <Card style={{width: '20vw', minHeight: '88vh', maxHeight: '88vh'}}>
+                    <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <span>Tests</span>
+                        <AddOutline className="add-test-button"/>
+                    </Card.Header>
+                    <ListGroup variant="flush" className="test-list">
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" />
+                    </ListGroup>
+                </Card>
             </Row>
         );
     }

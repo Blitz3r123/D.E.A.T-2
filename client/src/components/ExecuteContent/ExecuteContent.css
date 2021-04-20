@@ -1,8 +1,14 @@
-.execute-content-row{
-    padding: 2vh 1vw;
+.execute-content-row{padding: 2vh 1vw;}
+.add-test-button:hover, .delete-test-button:hover{cursor: pointer;}
+
+.test-list{
+    /* outline: 1px solid black; */
+    max-height: 100%;
+    overflow-y: scroll;
 }
 
-.connections-col-container{
-    /* outline: 1px solid black; */
-    margin-right: 2vw;
+.test-list-item{
+    margin-left: -1.5vw;
+    display: flex;
+    justify-content: space-between;
 }
