@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, ListGroup } from 'react-bootstrap';
+import { Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
 import { AddOutline, TrashOutline } from 'react-ionicons';
 
 import './ExecuteContent.css';
@@ -16,22 +16,16 @@ export default class ExecuteContent extends Component{
                         <AddOutline className="add-test-button"/>
                     </Card.Header>
                     <ListGroup variant="flush" className="test-list">
-                        <TestListItem testname="test one" testid="" active={true}/>
+                        <TestListItem testname="test one" active={true}/>
                         <TestListItem testname="test one" />
                         <TestListItem testname="test one" />
                         <TestListItem testname="test one" />
                         <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
-                        <TestListItem testname="test one" />
+                        <ListGroup.Item>
+                            <Button style={{width: '110%', marginLeft: '-1.5vw'}}>
+                                <AddOutline color="white" />Add Test
+                            </Button>
+                        </ListGroup.Item>
                     </ListGroup>
                 </Card>
             </Row>
