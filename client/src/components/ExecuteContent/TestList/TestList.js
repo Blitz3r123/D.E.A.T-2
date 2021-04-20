@@ -5,6 +5,7 @@ import { AddOutline, TrashOutline } from 'react-ionicons';
 import TestListItem from './TestListItem/TestListItem';
 
 export default class TestList extends Component{
+
     render(){
         return(
             <Card style={{width: '20vw', minHeight: '88vh', maxHeight: '88vh'}}>
@@ -13,7 +14,7 @@ export default class TestList extends Component{
                     <AddOutline className="add-test-button"/>
                 </Card.Header>
                 <ListGroup variant="flush" className="test-list">
-                    <TestListItem testname="test one" active={true}/>
+                    <TestListItem testname="test one" handleTestItemClick={this.props.handleTestItemClick} active={true}/>
                     <TestListItem testname="test one" />
                     <TestListItem testname="test one" />
                     <TestListItem testname="test one" />

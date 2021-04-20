@@ -7,7 +7,7 @@ export default class TestListItem extends Component{
         if(this.props.active){
             return(
                 <ListGroup.Item active>
-                    <div className="test-list-item">
+                    <div className="test-list-item" onClick={this.props.handleTestItemClick}>
                         <span>{this.props.testname}</span>
                         <TrashOutline color="white" className="delete-test-button" />
                     </div>
@@ -16,7 +16,7 @@ export default class TestListItem extends Component{
         }else{
             return(
                 <ListGroup.Item>
-                    <div className="test-list-item">
+                    <div className="test-list-item" onClick={this.props.handleTestItemClick}>
                         <span>{this.props.testname}</span>
                         <TrashOutline className="delete-test-button" />
                     </div>
