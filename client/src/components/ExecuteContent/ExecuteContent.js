@@ -16,7 +16,7 @@ export default class ExecuteContent extends Component{
                         <AddOutline className="add-test-button"/>
                     </Card.Header>
                     <ListGroup variant="flush" className="test-list">
-                        <TestListItem testname="test one" />
+                        <TestListItem testname="test one" testid="" active={true}/>
                         <TestListItem testname="test one" />
                         <TestListItem testname="test one" />
                         <TestListItem testname="test one" />
