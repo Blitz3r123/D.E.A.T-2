@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 import react, { Component } from 'react';
 import { ArrowForwardOutline } from 'react-ionicons';
 import { Redirect } from 'react-router-dom';
@@ -14,6 +16,12 @@ export default class CreateTestContent extends Component {
         };
     }
 
+    handleKeyDown = (e) => {
+        if(e.key === 'Enter'){
+            this.handleClick();
+        }
+    }
+
     handleClick = () => {
         if(this.state.testname.length == 0){
             alert("Test name can't be empty.");
@@ -23,6 +31,18 @@ export default class CreateTestContent extends Component {
                 2. Get key of recently created test
                 3. Redirec to /test/settings/:testid
             */
+
+            axios.post('http://localhost:4000/create/test', { testname: this.state.testname })
+                .then(response => {
+                    if(response.data.type == 'error'){
+                        alert(response.data.message);
+                    }else{
+                        // 2. Get key of last test insert
+                        let TestID = response.data.TestID;
+                        // 3. Redirect to /test/settings/:testid
+                        this.props.history.push('/test/settings/' + TestID);
+                    }
+                });
         }
     }
 
@@ -49,9 +69,8 @@ export default class CreateTestContent extends Component {
                 }}>
                     <input 
                         type="text"
-                        onChange={e => {
-                            this.setState({testname: e.target.value});
-                        }}
+                        onKeyDown={this.handleKeyDown}
+                        onChange={e => {this.setState({ testname: e.target.value })}}
                         placeholder="Enter a test name"
                         style={{
                             outline: 'none',
