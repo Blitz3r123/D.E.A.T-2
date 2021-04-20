@@ -16,6 +16,7 @@ import CreateContent from './components/CreateContent/CreateContent';
 import CreateTestContent from './components/CreateTestContent/CreateTestContent';
 import ExecuteContent from './components/ExecuteContent/ExecuteContent';
 import AnalyseContent from './components/AnalyseContent/AnalyseContent';
+import TestSettings from './components/TestSettings/TestSettings';
 
 export default class App extends Component {
 	render(){
@@ -39,8 +40,9 @@ export default class App extends Component {
 							<CreateContent />
 						</Route>
 						
-						<Route path="/create/test/:testname" component={CreateTestContent}/>
 						<Route path="/create/test/" component={CreateTestContent}/>
+
+						<Route path="/test/settings/:testid" component={TestSettings}/>
 
 						<Route exact path="/execute">
 							<ExecuteContent />
