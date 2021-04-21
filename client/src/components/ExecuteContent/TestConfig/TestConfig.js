@@ -4,6 +4,7 @@ import { Card, Col, Row } from 'react-bootstrap';
 import CogWheel from './../../../assets/CogWheel.jpg';
 import CompletedRunsList from './CompletedRunsList/CompletedRunsList';
 import ParticipantList from './ParticipantList/ParticipantList';
+import ParticipantSettings from './ParticipantSettings/ParticipantSettings';
 
 export default class TestConfig extends Component{
     constructor(props){
@@ -56,7 +57,7 @@ export default class TestConfig extends Component{
                         </Col>
 
                         <Col>
-                            <span>col 2</span>
+                            <ParticipantSettings />
                         </Col>
                     </Row>
 
