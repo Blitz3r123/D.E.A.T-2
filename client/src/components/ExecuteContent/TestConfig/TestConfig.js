@@ -1,7 +1,8 @@
 import { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Col, Row } from 'react-bootstrap';
 
 import CogWheel from './../../../assets/CogWheel.jpg';
+import ParticipantList from './ParticipantList/ParticipantList';
 
 export default class TestConfig extends Component{
     constructor(props){
@@ -43,8 +44,22 @@ export default class TestConfig extends Component{
                 <Card style={{marginLeft: '1vw', width: '62vw', minHeight: '88vh', maxHeight: '88vh', overflowY: 'scroll'}}>
 
                     <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
-                        <span>{this.props.test.TestName}</span>
+                        <span style={{fontSize: '1.1em', fontWeight: 'bold'}}>{this.state.test.TestName}</span>
                     </Card.Header>
+
+                    <Row style={{padding: '2vh 1vw'}}>
+                        <Col xs={4}>
+                            <Card>
+
+                                <ParticipantList />
+
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <span>col 2</span>
+                        </Col>
+                    </Row>
 
                 </Card>
             );
