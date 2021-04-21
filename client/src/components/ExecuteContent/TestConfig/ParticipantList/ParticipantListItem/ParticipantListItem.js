@@ -11,7 +11,7 @@ export default class ParticipantListItem extends Component{
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <span>P</span>
                     <span>Pub One</span>
-                    <TrashOutline />
+                    <TrashOutline className="delete-participant-button" />
                 </div>
             </ListGroup.Item>
         );

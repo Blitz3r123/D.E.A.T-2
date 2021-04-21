@@ -1,0 +1,8 @@
+.participant-list-container{
+    /* outline: 1px solid black; */
+    max-height: 40vh !important;
+    min-height: 40vh !important;
+    overflow-y: scroll;
+}
+
+.add-participant-container{padding-left: 1vw !important;}
