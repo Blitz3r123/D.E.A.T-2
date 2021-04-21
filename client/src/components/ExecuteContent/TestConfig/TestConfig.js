@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
+import CogWheel from './../../../assets/CogWheel.jpg';
+
 export default class TestConfig extends Component{
     constructor(props){
         super(props);
@@ -9,13 +11,44 @@ export default class TestConfig extends Component{
         };
     }
 
+    componentDidUpdate(){
+        if(this.state.test !== this.props.test){
+            this.setState({test: this.props.test});
+        }
+    }
+
     render(){
-        return(
-            <Card style={{marginLeft: '1vw', width: '62vw', minHeight: '88vh', maxHeight: '88vh'}}>
-                <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <span>{this.props.test.TestName}</span>
-                </Card.Header>
-            </Card>
-        );
+        if(this.state.test.TestName === undefined){
+            return(
+                <Card style={{marginLeft: '1vw', width: '62vw', minHeight: '88vh', maxHeight: '88vh', overflowY: 'scroll'}}>
+
+                    <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <span>{this.props.test.TestName}</span>
+                    </Card.Header>
+                    <div 
+                        style={{
+                            display: 'flex', 
+                            justifyContent: 'space-evenly', 
+                            flexDirection: 'column',
+                            alignItems: 'center'
+                        }}
+                    >
+                        <img style={{width: '50%', marginTop: '10vh'}} alt="" src={CogWheel}/>
+                        <p style={{color: 'grey'}}>Select a test from the left to view it's settings.</p>
+                    </div>
+                </Card>
+            );                        
+        }else{
+            return(
+                <Card style={{marginLeft: '1vw', width: '62vw', minHeight: '88vh', maxHeight: '88vh', overflowY: 'scroll'}}>
+
+                    <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <span>{this.props.test.TestName}</span>
+                    </Card.Header>
+
+                </Card>
+            );
+        }
+
     }
 }
