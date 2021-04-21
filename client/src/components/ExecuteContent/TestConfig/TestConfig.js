@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
 
 import CogWheel from './../../../assets/CogWheel.jpg';
+import CompletedRunsList from './CompletedRunsList/CompletedRunsList';
 import ParticipantList from './ParticipantList/ParticipantList';
 
 export default class TestConfig extends Component{
@@ -49,11 +50,9 @@ export default class TestConfig extends Component{
 
                     <Row style={{padding: '2vh 1vw'}}>
                         <Col xs={4}>
-                            <Card>
-
-                                <ParticipantList />
-
-                            </Card>
+                            <ParticipantList />
+                            <CompletedRunsList />
+                            
                         </Col>
 
                         <Col>

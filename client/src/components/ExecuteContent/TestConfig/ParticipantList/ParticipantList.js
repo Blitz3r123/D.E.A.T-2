@@ -9,7 +9,7 @@ import { AddOutline } from 'react-ionicons';
 export default class ParticipantList extends Component{
     render(){
         return(
-            <div>
+            <Card>
                 <Card.Header>
                     <span>Participants</span>
                 </Card.Header>
@@ -40,7 +40,7 @@ export default class ParticipantList extends Component{
                         </Button>
                     </ListGroup.Item>
                 </ListGroup>
-            </div>
+            </Card>
         );
     }
 }
