@@ -13,27 +13,66 @@ const db = mysql.createConnection({
     database: 'deat2'
 });
 
-app.put('/update', (req, res) => {
-    const id = req.body.id;
-    const name = req.body.name;
+// app.put('/update', (req, res) => {
+//     const id = req.body.id;
+//     const name = req.body.name;
 
-    res.send({id: id, name: name});
+//     res.send({id: id, name: name});
 
-    // db.query('UPDATE Contact SET Name = ? WHERE ContactID = ?', [name, id], (err, results) => {
-    //     if(err){
-    //         console.log(err);
-    //     }else{
-    //         res.send(results);
-    //     }
-    // });
-});
+//     // db.query('UPDATE Contact SET Name = ? WHERE ContactID = ?', [name, id], (err, results) => {
+//     //     if(err){
+//     //         console.log(err);
+//     //     }else{
+//     //         res.send(results);
+//     //     }
+//     // });
+// });
 
-app.get('/contacts', (req, res) => {
-    db.query('SELECT * FROM Contact', (err, results) => {
+// app.get('/contacts', (req, res) => {
+//     db.query('SELECT * FROM Contact', (err, results) => {
+//         if(err){
+//             console.log(err);
+//         }else{
+//             res.send(results);
+//         }
+//     });
+// });
+
+// app.post('/create', (req, res) => {
+//     const name = req.body.name;
+//     const email = req.body.email;
+//     const telephone = req.body.telephone;
+
+//     db.query('INSERT INTO Contact(Name, Email, Telephone) VALUES(?, ?, ?)', [name, email, telephone], (err, results) => {
+//         if(err){
+//             console.log(err);
+//         }else{
+//             res.send('values inserted');
+//         }
+//     });
+// });
+
+app.get('/test/:testid', (req, res) => {
+    // Return a single test from database
+    db.query('SELECT * FROM Test WHERE TestID = ?', [req.params.testid], (err, result) => {
         if(err){
             console.log(err);
         }else{
-            res.send(results);
+            res.send(result[0]);
+        }
+    });
+});
+
+app.get('/tests', (req, res) => {
+    /*
+        Return list of tests from database.
+    */
+
+    db.query('SELECT * FROM Test', (err, result) => {
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
         }
     });
 });
@@ -70,20 +109,6 @@ app.post('/create/test', (req, res) => {
                 });
 
             }
-        }
-    });
-});
-
-app.post('/create', (req, res) => {
-    const name = req.body.name;
-    const email = req.body.email;
-    const telephone = req.body.telephone;
-
-    db.query('INSERT INTO Contact(Name, Email, Telephone) VALUES(?, ?, ?)', [name, email, telephone], (err, results) => {
-        if(err){
-            console.log(err);
-        }else{
-            res.send('values inserted');
         }
     });
 });

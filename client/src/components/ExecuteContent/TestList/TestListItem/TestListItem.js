@@ -5,7 +5,7 @@ import { TrashOutline } from 'react-ionicons';
 export default class TestListItem extends Component{
     
     handleClick = () => {
-        this.props.handleTestItemClick(this.props.testname);
+        this.props.handleTestItemClick(this.props.test.TestID);
     }
 
     render(){
@@ -13,7 +13,7 @@ export default class TestListItem extends Component{
             return(
                 <ListGroup.Item active>
                     <div className="test-list-item" onClick={this.handleClick}>
-                        <span>{this.props.testname}</span>
+                        <span>{this.props.test.TestName}</span>
                         <TrashOutline color="white" className="delete-test-button" />
                     </div>
                 </ListGroup.Item>
@@ -22,7 +22,7 @@ export default class TestListItem extends Component{
             return(
                 <ListGroup.Item>
                     <div className="test-list-item" onClick={this.handleClick}>
-                        <span>{this.props.testname}</span>
+                        <span>{this.props.test.TestName}</span>
                         <TrashOutline className="delete-test-button" />
                     </div>
                 </ListGroup.Item>
