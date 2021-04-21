@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
 import './AnalyseRow.css';
@@ -20,7 +20,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -31,7 +31,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -42,7 +42,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -53,7 +53,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -64,7 +64,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -75,7 +75,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -86,7 +86,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -97,7 +97,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>
@@ -108,7 +108,7 @@ export default class AnalyseRow extends Component{
                     </Card.Header>
 
                     <Card.Body>
-                        <img src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
+                        <img alt="" src="https://cdn.corporatefinanceinstitute.com/assets/line-graph.jpg"></img>
                     </Card.Body>
 
                 </Card>

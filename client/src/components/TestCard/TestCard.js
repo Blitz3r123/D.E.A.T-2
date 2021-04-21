@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import { Component } from 'react';
 import { Card, Badge } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Cog, Play } from 'react-ionicons';
@@ -6,9 +6,9 @@ import { Cog, Play } from 'react-ionicons';
 export default class TestCard extends Component{
     constructor(props){
         super(props);
-        if(this.props.test.status == 'standing by'){
+        if(this.props.test.status === 'standing by'){
             this.props.test.variant = 'warning';
-        }else if(this.props.test.status == 'running'){
+        }else if(this.props.test.status === 'running'){
             this.props.test.variant = 'success';
         }else{
             this.props.test.variant = 'danger';

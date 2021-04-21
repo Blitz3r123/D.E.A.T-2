@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import react, { Component } from 'react';
+import { Component } from 'react';
 import { ArrowForwardOutline } from 'react-ionicons';
 
 import EmptyImage from './../../assets/EmptyExistingRowImage.jpg';
@@ -22,7 +22,7 @@ export default class CreateTestContent extends Component {
     }
 
     handleClick = () => {
-        if(this.state.testname.length == 0){
+        if(this.state.testname.length === 0){
             alert("Test name can't be empty.");
         }else{
             /*
@@ -33,7 +33,7 @@ export default class CreateTestContent extends Component {
 
             axios.post('http://localhost:4000/create/test', { testname: this.state.testname })
                 .then(response => {
-                    if(response.data.type == 'error'){
+                    if(response.data.type === 'error'){
                         alert(response.data.message);
                     }else{
                         // 2. Get key of last test insert
@@ -60,7 +60,7 @@ export default class CreateTestContent extends Component {
                 }}
             >
                 
-                <img src={EmptyImage} style={{width: '70vh', marginBottom: '5vh'}}/>
+                <img alt="" src={EmptyImage} style={{width: '70vh', marginBottom: '5vh'}}/>
                 <div style={{
                     display: 'flex',
                     justifyContent: 'space-between',

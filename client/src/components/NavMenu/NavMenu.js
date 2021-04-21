@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
 import { HomeOutline, CreateOutline, StatsChartOutline, PlayOutline } from 'react-ionicons';
 import { Link } from 'react-router-dom';
 

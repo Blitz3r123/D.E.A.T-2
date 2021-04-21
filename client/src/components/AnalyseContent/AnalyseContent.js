@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Accordion, Button } from 'react-bootstrap';
+import { Row, Col, Card } from 'react-bootstrap';
 
 import './AnalyseContent.css';
 import './../../Global.css';

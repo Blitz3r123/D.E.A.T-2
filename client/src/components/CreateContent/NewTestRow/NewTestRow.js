@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import react, { Component } from 'react';
+import { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
 import { ArrowForward } from 'react-ionicons';
@@ -24,7 +24,7 @@ class NewTestRow extends Component{
     }
 
     handleClick = () => {
-        if(this.state.testname.length == 0){
+        if(this.state.testname.length === 0){
             alert("Test name can't be empty.");
         }else{
             /*
@@ -35,7 +35,7 @@ class NewTestRow extends Component{
 
             axios.post('http://localhost:4000/create/test', { testname: this.state.testname })
                 .then(response => {
-                    if(response.data.type == 'error'){
+                    if(response.data.type === 'error'){
                         alert(response.data.message);
                     }else{
                         // 2. Get key of last test insert
@@ -53,7 +53,7 @@ class NewTestRow extends Component{
                 <Card.Header style={{fontWeight: 'bold'}}>New Test</Card.Header>
                 <Card.Body className="new-test-container">
                     <div className="new-test-form-container">
-                        <img src={NewTestImage}></img>
+                        <img alt="" src={NewTestImage}></img>
                         <p>Create a new test by giving it a name...</p>
                         <div className="new-test-form">
                             <input 

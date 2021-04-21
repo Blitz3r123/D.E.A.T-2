@@ -1,5 +1,5 @@
-import react, { Component } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
 import './ExecuteRow.css';
 

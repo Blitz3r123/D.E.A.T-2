@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { AddOutline, TrashOutline } from 'react-ionicons';
+import { Row } from 'react-bootstrap';
 
 import './ExecuteContent.css';
 
@@ -15,14 +14,14 @@ export default class ExecuteContent extends Component{
         };
     }
 
-    handleTestItemClick = () => {
-        console.log('testname');
+    handleTestItemClick = (testname) => {
+        this.setState({ currentTest: testname });
     }
 
     render(){
         return(
             <Row className="execute-content-row">
-                <TestList handleTestItemClick={this.handleTestItemClick}/>
+                <TestList activeTest={this.state.currentTest} handleTestItemClick={this.handleTestItemClick}/>
                 <TestConfig testname={this.state.currentTest}/>
             </Row>
         );

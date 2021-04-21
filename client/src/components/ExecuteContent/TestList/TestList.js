@@ -1,10 +1,15 @@
 import { Component } from 'react';
-import { Row, Col, Card, ListGroup, Button } from 'react-bootstrap';
-import { AddOutline, TrashOutline } from 'react-ionicons';
+import { Card, ListGroup, Button } from 'react-bootstrap';
+import { AddOutline } from 'react-ionicons';
 
 import TestListItem from './TestListItem/TestListItem';
 
 export default class TestList extends Component{
+
+    constructor(props){
+        super(props);
+        this.state = {};
+    }
 
     render(){
         return(
@@ -15,10 +20,10 @@ export default class TestList extends Component{
                 </Card.Header>
                 <ListGroup variant="flush" className="test-list">
                     <TestListItem testname="test one" handleTestItemClick={this.props.handleTestItemClick} active={true}/>
-                    <TestListItem testname="test one" />
-                    <TestListItem testname="test one" />
-                    <TestListItem testname="test one" />
-                    <TestListItem testname="test one" />
+                    <TestListItem testname="test two" handleTestItemClick={this.props.handleTestItemClick}/>
+                    <TestListItem testname="test three" handleTestItemClick={this.props.handleTestItemClick}/>
+                    <TestListItem testname="test four" handleTestItemClick={this.props.handleTestItemClick}/>
+                    <TestListItem testname="test five" handleTestItemClick={this.props.handleTestItemClick}/>
                     <ListGroup.Item>
                         <Button style={{width: '110%', marginLeft: '-1.5vw'}}>
                             <AddOutline color="white" />Add Test

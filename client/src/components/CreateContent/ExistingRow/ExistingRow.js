@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import { Component } from 'react';
 import { Card, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AddOutline } from 'react-ionicons';

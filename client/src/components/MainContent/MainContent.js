@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Card, Col, Row, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 import './MainContent.css';
 import AnalyseRow from './AnalyseRow/AnalyseRow';

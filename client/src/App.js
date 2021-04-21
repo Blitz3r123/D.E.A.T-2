@@ -3,8 +3,7 @@ import {
 	Container,
 	Row,
 	Col,
-	Navbar,
-	NavbarBrand
+	Navbar
 } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom';
 
