@@ -9,8 +9,8 @@ export default class ParticipantListItem extends Component{
         return(
             <ListGroup.Item className="participant-list-item">
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <span>P</span>
-                    <span>Pub One</span>
+                    {this.props.participant.type === 'publisher' ? <span>P</span> : <span>S</span>}
+                    <span>{this.props.participant.name}</span>
                     <TrashOutline className="delete-participant-button" />
                 </div>
             </ListGroup.Item>
