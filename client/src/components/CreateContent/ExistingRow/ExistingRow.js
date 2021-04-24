@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Card, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AddOutline } from 'react-ionicons';
+import axios from 'axios';
 
 import './ExistingRow.css';
 
@@ -12,14 +13,18 @@ export default class ExistingRow extends Component{
     constructor(props){
         super(props);
         this.state = {
-            tests: [
-                // {id: 1, title: 'test 1', status: 'standing by'},
-                // {id: 2, title: 'test 2', status: 'running'},
-                // {id: 3, title: 'test 3', status: 'complete'},
-                // {id: 4, title: 'test 4', status: 'standing by'},
-                // {id: 5, title: 'test 5', status: 'standing by'}
-            ]
+            tests: []
         };
+    }
+
+    componentDidMount(){
+        axios.get('http://localhost:4000/tests')
+            .then(results => {
+                this.setState({tests: results.data});
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 
     render(){
@@ -36,8 +41,14 @@ export default class ExistingRow extends Component{
                     <div className="existing-row-container">
 
                         {this.state.tests.map(test => {
-                            return <TestCard test={test} />
+                            return <TestCard key={test.TestID} test={test} />
                         })}
+
+                        <Card className="test-card" bg="light" text="white">
+                            <Card.Body style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <Link to="/create/test">Create a New Test</Link>
+                            </Card.Body>
+                        </Card>
 
                     </div>
 
