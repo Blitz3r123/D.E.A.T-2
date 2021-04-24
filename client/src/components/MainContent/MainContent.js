@@ -12,7 +12,7 @@ export default class MainContent extends Component{
             <div style={{padding: 10, paddingRight: 0, maxWidth: '84vw'}}>
 
                 {/* Create Row */}
-                <CreateRow />
+                {/* <CreateRow /> */}
 
                 {/* Execute Row */}
                 <ExecuteRow />
