@@ -1,7 +1,6 @@
 import { Component } from 'react';
-import { Card, Dropdown } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { AddOutline } from 'react-ionicons';
 import axios from 'axios';
 
 import './ExistingRow.css';

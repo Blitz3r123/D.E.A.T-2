@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './MainContent.css';
 import AnalyseRow from './AnalyseRow/AnalyseRow';
 
-import CreateRow from './CreateRow/CreateRow';
+// import CreateRow from './CreateRow/CreateRow';
 import ExecuteRow from './ExecuteRow/ExecuteRow';
 
 export default class MainContent extends Component{
