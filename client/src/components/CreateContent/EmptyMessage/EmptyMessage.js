@@ -10,9 +10,7 @@ export default class EmptyMessage extends Component{
                 <div className="empty-message-container">
                     <img alt="" className="existing-row-empty-message-image" src={emptyImage}></img>
                     <p>
-                        You don't seem to have any existing tests/participants...Why not create 
-                        a <Link className="empty-link" to="/create/publisher">publisher template</Link>, <Link className="empty-link" to="/create/subscriber">subscriber template</Link>, or
-                        a <Link className="empty-link" to="/create/test">test</Link>?
+                        You don't seem to have any existing tests... Why not <Link className="empty-link" to="/create/test">create one</Link>?
                     </p>
                 </div>
             </div>

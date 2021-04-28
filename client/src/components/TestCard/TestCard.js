@@ -20,13 +20,13 @@ export default class TestCard extends Component{
             <Card className="test-card" bg="light">
                 <Card.Body className="test-container">
                     <div className="test-title">
-                        {this.props.test.title}
+                        {this.props.test.TestName}
                         <Badge pill variant={this.props.test.variant}>{this.props.test.status}</Badge>
                     </div>
                     <div className="test-actions">
 
-                        <Link to={"create/test/" + this.props.test.id}><Cog color="grey" title="Edit Test Settings"></Cog></Link>
-                        <Link to={"execute/test/" + this.props.test.id}><Play color="green" title="Start Test"></Play></Link>
+                        <Link to={"create/test/" + this.props.test.TestID}><Cog color="grey" title="Edit Test Settings"></Cog></Link>
+                        <Link to={"execute/test/" + this.props.test.TestID}><Play color="green" title="Start Test"></Play></Link>
 
                     </div>
                 </Card.Body>

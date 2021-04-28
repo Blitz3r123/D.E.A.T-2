@@ -51,7 +51,7 @@ export default class TestConfig extends Component{
 
                     <Row style={{padding: '2vh 1vw'}}>
                         <Col xs={4}>
-                            <ParticipantList />
+                            <ParticipantList test={this.state.test}/>
                             <CompletedRunsList />
                             
                         </Col>

@@ -16,6 +16,7 @@ import CreateTestContent from './components/CreateTestContent/CreateTestContent'
 import ExecuteContent from './components/ExecuteContent/ExecuteContent';
 import AnalyseContent from './components/AnalyseContent/AnalyseContent';
 import TestSettings from './components/TestSettings/TestSettings';
+import AddParticipant from './components/AddParticipant/AddParticipant';
 
 export default class App extends Component {
 	render(){
@@ -31,10 +32,11 @@ export default class App extends Component {
 				
 				<Col sm={10} style={{paddingLeft: 0, paddingRight: 0}}>
 					<Switch>
+						{/* Main content */}
 						<Route exact path="/">
 							<MainContent />
 						</Route>
-
+						
 						<Route exact path="/create">
 							<CreateContent />
 						</Route>
@@ -47,6 +49,7 @@ export default class App extends Component {
 							<ExecuteContent />
 						</Route>
 
+						<Route path="/add-participant/:testid" component={AddParticipant} />
 
 						<Route exact path="/analyse">
 							<AnalyseContent />

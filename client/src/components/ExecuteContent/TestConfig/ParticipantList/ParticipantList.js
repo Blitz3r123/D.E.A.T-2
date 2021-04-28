@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Button, Card, ListGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import ParticipantListItem from './ParticipantListItem/ParticipantListItem';
 
@@ -7,6 +8,23 @@ import './ParticipantList.css';
 import { AddOutline } from 'react-ionicons';
 
 export default class ParticipantList extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            test: this.props.test,
+            participants: [
+                {
+                    type: 'publisher',
+                    name: 'pub one'
+                },
+                {
+                    type: 'subsriber',
+                    name: 'sub one'
+                },
+            ]
+        };
+    }
+    
     render(){
         return(
             <Card>
@@ -15,18 +33,13 @@ export default class ParticipantList extends Component{
                 </Card.Header>
                 
                 <ListGroup className="participant-list-container">
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
-                    <ParticipantListItem />
+                    {
+                        this.state.participants.map(p => {
+                            return <ParticipantListItem key={p.ParticipantID} participant={p}/>
+                        })
+                    }
                     <ListGroup.Item className="add-participant-container">
-                        <Button 
+                        <Link 
                             variant="outline-primary" 
                             style={{
                                 width: '100%', 
@@ -34,10 +47,11 @@ export default class ParticipantList extends Component{
                                 justifyContent: 'center', 
                                 alignItems: 'center'
                             }}
+                            className="add-participant-button"
                         >
                             <AddOutline color="#007bff" />
-                            Add Participant
-                        </Button>
+                            <Link to={"/add-participant/" + this.state.test.TestID}>Add Participant</Link>
+                        </Link>
                     </ListGroup.Item>
                 </ListGroup>
             </Card>

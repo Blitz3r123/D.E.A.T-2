@@ -61,6 +61,7 @@ export default class CreateTestContent extends Component {
             >
                 
                 <img alt="" src={EmptyImage} style={{width: '70vh', marginBottom: '5vh'}}/>
+                <p style={{color: 'grey'}}>Start by naming your test:</p>
                 <div style={{
                     display: 'flex',
                     justifyContent: 'space-between',
