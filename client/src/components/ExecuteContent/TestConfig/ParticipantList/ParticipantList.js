@@ -14,10 +14,12 @@ export default class ParticipantList extends Component{
             test: this.props.test,
             participants: [
                 {
+                    ParticipantID: 1,
                     type: 'publisher',
                     name: 'pub one'
                 },
                 {
+                    ParticipantID: 3,
                     type: 'subsriber',
                     name: 'sub one'
                 },
@@ -40,6 +42,7 @@ export default class ParticipantList extends Component{
                     }
                     <ListGroup.Item className="add-participant-container">
                         <Link 
+                            to={"/add-pariticipant/" + this.state.test.TestID}
                             variant="outline-primary" 
                             style={{
                                 width: '100%', 

@@ -63,6 +63,17 @@ app.get('/test/:testid', (req, res) => {
     });
 });
 
+app.get('/delete-test/:testid', (req, res) => {
+    // Delete the test from the database
+    db.query('DELETE FROM Test WHERE TestID = ?', [req.params.testid], (err, result) => {
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        }
+    });
+});
+
 app.get('/tests', (req, res) => {
     /*
         Return list of tests from database.
