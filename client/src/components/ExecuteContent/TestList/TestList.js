@@ -49,7 +49,7 @@ export default class TestList extends Component{
             /*
                 1. Create test in database
                 2. Get key of recently created test
-                3. Redirec to /test/settings/:testid
+                3. Redirect to /test/settings/:testid
             */
 
             axios.post('http://localhost:4000/create/test', { testname: this.state.testname })
@@ -112,9 +112,9 @@ export default class TestList extends Component{
                         this.state.tests.map(test => {
                             if(test.TestName === this.props.currentTest.TestName){
                                 return <TestListItem 
-                                            key={test.TestID} 
-                                            test={test} 
-                                            handleTestItemClick={this.props.handleTestItemClick} 
+                                            key={test.TestID}
+                                            test={test}
+                                            handleTestItemClick={this.props.handleTestItemClick}
                                             active={true}
                                             refreshTestList={this.refreshTestList} 
                                         />
